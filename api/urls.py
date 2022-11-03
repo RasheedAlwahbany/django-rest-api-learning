@@ -2,5 +2,6 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
-     path('api/',views.getData),
+     path('api0/',views.getData),
+     path('api1/',views.ItemsList.as_view()),
 ]
