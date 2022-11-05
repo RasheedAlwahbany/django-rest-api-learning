@@ -22,6 +22,7 @@ Keep in mind that you’ll need to reactivate your virtual environment in every 
 Navigate to an empty folder in your terminal and install Django and Django REST framework in your project with the commands below:
 
 `pip install django`
+
 `pip install django_rest_framework`
 
 Create a Django project called todo with the following command:
