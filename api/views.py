@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from app.models import Item
 from api.items_serializer import ItemSerializer
 from rest_framework.renderers import JSONRenderer
+import requests
 
 
 # Create View from Rest Api As simple way
@@ -16,12 +17,31 @@ def getData(request):
     return Response(items.data)
 
 # Create View from Rest APi AS Best practice code
+# Insider REST API
 @permission_classes((permissions.AllowAny,))
 class ItemsList(APIView):
     def get(self,request):
         items = ItemSerializer( Item.objects.all(),many=True)
+        
+        return Response(items.data)
+    
+    def post(self,request):
+                   
+        items = ItemSerializer( Item.objects.all(),many=True)
 
         return Response(items.data)
     
-    def post(self):
-        pass
+    
+# Outsider API
+@permission_classes((permissions.AllowAny,))
+class OutAPIData(APIView):
+    def get(self,request):
+        items= requests.get("https://jsonplaceholder.typicode.com/users")
+        
+        return Response(items.json())
+    
+    def post(self,request):
+                   
+        items= requests.get("https://jsonplaceholder.typicode.com/users")
+
+        return Response(items.json())
