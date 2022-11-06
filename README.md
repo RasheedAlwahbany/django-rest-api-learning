@@ -1,5 +1,5 @@
 ## Project
-Django rest API first learning app and connection with **ZATCA API** online
+Django rest API first learning app
 
 ## What is Django?
 Django is a free, open source, Python-based web framework that follows the Model-View-Template (MVT) architectural pattern. It reduces the hassle of web development so that you can focus on writing your app instead of reinventing the wheel.
@@ -37,7 +37,4 @@ Run your initial migrations of the built-in user model:
 
 `python manage.py migrate`
 
-## To Connect with ZATCA
-
-The `RestAPI` to connecting with **ZATCA API** is in the `API` folder
  
