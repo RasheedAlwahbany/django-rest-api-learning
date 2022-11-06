@@ -36,3 +36,6 @@ Create a Django project called todo with the following command:
 Run your initial migrations of the built-in user model:
 
 `python manage.py migrate`
+
+The `RestAPI` in the `API` folder
+ 
